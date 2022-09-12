@@ -1,0 +1,15 @@
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\bin\Debug\net6.0\tic-tac-toe.exe
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\bin\Debug\net6.0\tic-tac-toe.deps.json
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\bin\Debug\net6.0\tic-tac-toe.runtimeconfig.json
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\bin\Debug\net6.0\tic-tac-toe.dll
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\bin\Debug\net6.0\tic-tac-toe.pdb
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\obj\Debug\net6.0\tic-tac-toe.csproj.AssemblyReference.cache
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\obj\Debug\net6.0\tic-tac-toe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\obj\Debug\net6.0\tic-tac-toe.AssemblyInfoInputs.cache
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\obj\Debug\net6.0\tic-tac-toe.AssemblyInfo.cs
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\obj\Debug\net6.0\tic-tac-toe.csproj.CoreCompileInputs.cache
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\obj\Debug\net6.0\tic-tac-toe.dll
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\obj\Debug\net6.0\refint\tic-tac-toe.dll
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\obj\Debug\net6.0\tic-tac-toe.pdb
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\obj\Debug\net6.0\tic-tac-toe.genruntimeconfig.cache
+C:\Users\mhend\OneDrive\Documents\School\CSE210\week01\tic-tac-toe\obj\Debug\net6.0\ref\tic-tac-toe.dll
