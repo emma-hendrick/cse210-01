@@ -5,7 +5,7 @@ Assignment: "Unit 01 Prove: Developer"
 */
 using System.Collections.Generic;
 
-namespace TicTacToe
+namespace TicTacToeProgram
 {
     internal class Program
     {
