@@ -28,10 +28,20 @@ namespace TicTacToeProgram
             // Play the current turn
             Console.WriteLine();
             Console.WriteLine(board);
+
+            do {
+
             Console.WriteLine($"{player}'s turn to choose a square (1-9): ");
+            string lineRead = Console.ReadLine() ?? "0";
 
             // Declare variable space to be the space the player is trying to play in
-            space = int.Parse(Console.ReadLine() ?? "0");
+            if (lineRead.All(Char.IsDigit)) {
+                space = int.Parse(lineRead);
+            } else {
+                space = 0;
+            }
+
+            } while (space < 1 || space > 9);
 
             if (board.CheckPos(space) == players[turnNum % 2] || board.CheckPos(space) == players[(turnNum + 1) % 2]) {
                 Console.WriteLine("No Cheating!");
