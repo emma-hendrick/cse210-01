@@ -20,46 +20,53 @@ namespace TicTacToeProgram
             int space;
             int turnNum = 0;
 
-            char[] players = new char[2]{'X', 'O'};
+            char[] players = new char[2] { 'X', 'O' };
 
-            do {
+            do
+            {
 
-            player = players[turnNum % 2];
+                player = players[turnNum % 2];
 
-            // Play the current turn
-            Console.WriteLine();
-            Console.WriteLine(board);
+                // Play the current turn
+                Console.WriteLine();
+                Console.WriteLine(board);
 
-            do {
+                do
+                {
 
-            Console.WriteLine($"{player}'s turn to choose a square (1-9): ");
-            string lineRead = Console.ReadLine() ?? "0";
+                    Console.WriteLine($"{player}'s turn to choose a square (1-9): ");
+                    string lineRead = Console.ReadLine() ?? "0";
 
-            // Declare variable space to be the space the player is trying to play in
-            if (lineRead.All(Char.IsDigit)) {
-                space = int.Parse(lineRead);
-            } else {
-                space = 0;
-            }
+                    // Declare variable space to be the space the player is trying to play in
+                    if (lineRead.All(Char.IsDigit))
+                    {
+                        space = int.Parse(lineRead);
+                    }
+                    else
+                    {
+                        space = 0;
+                    }
 
-            } while (space < 1 || space > 9);
+                } while (space < 1 || space > 9);
 
-            if (board.CheckPos(space) == players[turnNum % 2] || board.CheckPos(space) == players[(turnNum + 1) % 2]) {
-                Console.WriteLine("No Cheating!");
-                winner = ' ';
-            }
-            else {
-                winner = board.PlayTurn(player, space);
-                turnNum++;
-            }
-            if (turnNum >= 9) {winner = '.';}
+                if (board.CheckPos(space) == players[turnNum % 2] || board.CheckPos(space) == players[(turnNum + 1) % 2])
+                {
+                    Console.WriteLine("No Cheating!");
+                    winner = ' ';
+                }
+                else
+                {
+                    winner = board.PlayTurn(player, space);
+                    turnNum++;
+                }
+                if (turnNum >= 9) { winner = '.'; }
 
             } while (winner == ' ');
 
             Console.WriteLine();
             Console.WriteLine(board);
-            if (winner == '.'){Console.WriteLine("It's a draw!!");}
-            else {Console.WriteLine($"Game Over! {winner} won!!");}
+            if (winner == '.') { Console.WriteLine("It's a draw!!"); }
+            else { Console.WriteLine($"Game Over! {winner} won!!"); }
 
         }
     }
@@ -70,10 +77,11 @@ namespace TicTacToeProgram
         private char[,] board;
 
         // Class constructor
-        public TicTacToe(){
+        public TicTacToe()
+        {
 
             // Initialize an empty 3x3 board
-            board = new char[3, 3]{{'1','2','3'},{'4','5','6'},{'7','8','9'}};
+            board = new char[3, 3] { { '1', '2', '3' }, { '4', '5', '6' }, { '7', '8', '9' } };
 
         }
 
@@ -90,58 +98,72 @@ namespace TicTacToeProgram
             board[x, y] = player;
 
             // Check for a win on the X axis
-            for (int i = 0; i < boardSize; i++) {
+            for (int i = 0; i < boardSize; i++)
+            {
 
                 // If any item in the X axis isn't the players symbol then exit the loop
-                if (board[i, y] != player){
+                if (board[i, y] != player)
+                {
                     break;
                 }
 
                 // Otherwise, report a win
-                if (i == (boardSize - 1)){
+                if (i == (boardSize - 1))
+                {
                     return player;
                 }
             }
 
             // Check for a win on the Y axis
-            for (int i = 0; i < boardSize; i++) {
+            for (int i = 0; i < boardSize; i++)
+            {
 
                 // If any item in the Y axis isn't the players symbol then exit the loop
-                if (board[x, i] != player){
+                if (board[x, i] != player)
+                {
                     break;
                 }
 
                 // Otherwise, report a win
-                if (i == (boardSize - 1)){
+                if (i == (boardSize - 1))
+                {
                     return player;
                 }
             }
 
             // Check for a win along the main diagonal
-            if (x == y) {
-                for (int i = 0; i < boardSize; i++) {
+            if (x == y)
+            {
+                for (int i = 0; i < boardSize; i++)
+                {
                     // If any item along the diagonal isn't the players symbol then exit the loop
-                    if (board[i, i] != player){
+                    if (board[i, i] != player)
+                    {
                         break;
                     }
 
                     // Otherwise, report a win
-                    if (i == (boardSize - 1)){
+                    if (i == (boardSize - 1))
+                    {
                         return player;
                     }
                 }
             }
 
             // Check for a win along the other diagonal
-            if (x + y == 2) {
-                for (int i = 0; i < boardSize; i++) {
+            if (x + y == 2)
+            {
+                for (int i = 0; i < boardSize; i++)
+                {
                     // If any item along the diagonal isn't the players symbol then exit the loop
-                    if (board[2-i, i] != player){
+                    if (board[2 - i, i] != player)
+                    {
                         break;
                     }
 
                     // Otherwise, report a win
-                    if (i == (boardSize - 1)){
+                    if (i == (boardSize - 1))
+                    {
                         return player;
                     }
                 }
@@ -156,12 +178,14 @@ namespace TicTacToeProgram
             string boardString = "";
             int boardStringSize = 5;
 
-            for (int i = 0; i < boardStringSize; i ++) {
-                for (int j = 0; j < boardStringSize; j ++) {
-                    if (i % 2 == 1 && j % 2 == 1) {boardString += "+";}
-                    else if (i % 2 == 1) {boardString += "-";}
-                    else if (j % 2 == 1) {boardString += "|";}
-                    else {boardString += board[i / 2, j / 2];}
+            for (int i = 0; i < boardStringSize; i++)
+            {
+                for (int j = 0; j < boardStringSize; j++)
+                {
+                    if (i % 2 == 1 && j % 2 == 1) { boardString += "+"; }
+                    else if (i % 2 == 1) { boardString += "-"; }
+                    else if (j % 2 == 1) { boardString += "|"; }
+                    else { boardString += board[i / 2, j / 2]; }
                 }
 
                 boardString += "\n";
@@ -177,7 +201,7 @@ namespace TicTacToeProgram
 
             int x = position / 3;
             int y = position % 3;
-            
+
             return board[x, y];
         }
 
